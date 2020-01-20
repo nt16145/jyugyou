@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="授業変更情報">
+	<meta name="viewport" content="width=device-width">
+	<title>授業変更情報</title>
+	<link rel="stylesheet" media="all" href="../static/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="../static/script.js"></script>
+</head>
+
+<body id="top">
+	<div id="wrapper">
+
+		<div id="sidebar">
+			<div id="sidebarWrap">
+				<nav id="mainnav">
+					<p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
+					<div class="panel">
+						<ul>
+							<h1>
+								<li><a href=".">TOPへ</a></li>
+							</h1>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div id="content">
+			<p id="mainImg"><img src="../static/imeges/mainImg.jpg" alt=""></p>
+
+
+			<!-- MESSAGE -->
+			<section id="sec01">
+				<h2>授業変更情報</h2>
+				<table border="1" align="center">
+					<thead>
+						<tr>
+							<th>日付</th>
+							<th>概要</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							{% for i in range(leng) %}
+							{{ jyugyou[i]|safe }}
+							{% endfor %}
+						</tr>
+					</tbody>
+				</table>
+
+			</section>
+			<!-- // MESSAGE -->
+			<!-- GALLERY -->
+			<section id=" sec02">
+
+			</section>
+			<!-- // GALLERY -->
+			<!-- BRAND -->
+			<section id="sec03">
+
+			</section>
+			<!-- // BRAND -->
+			<!-- PROJECT -->
+			<section id="sec04">
+
+			</section>
+			<!-- // PROJECT -->
+			<!-- COMPANY -->
+			<section id="sec05">
+
+			</section>
+			<!-- // COMPANY -->
+
+			<footer id="footer">
+				Design by <a href="http://f-tpl.com" target="_blank">http://f-tpl.com</a>
+				<!-- ←クレジット表記を外す場合はシリアルキーが必要です http://f-tpl.com/credit/ -->
+			</footer>
+
+		</div>
+	</div>
+
+</body>
+
+</html>

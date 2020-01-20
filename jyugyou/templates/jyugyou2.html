@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="授業変更情報">
+	<meta name="viewport" content="width=device-width">
+	<title>授業変更情報</title>
+	<link rel="stylesheet" media="all" href="../static/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="../static/script.js"></script>
+</head>
+
+
+<script type="text/javascript">
+	/* パラメータを渡す側 */
+	function send() {
+		var c = "";
+		var f = "";
+		var s = "";
+
+		if (document.form1.c.value != "") {
+			c = escape(document.form1.c.value);
+		}
+
+
+		if (document.form1.f[0].checked) {
+			f = escape(document.form1.f[0].value);
+		} else if (document.form1.f[1].checked) {
+			f = escape(document.form1.f[1].value);
+		}
+
+		if (document.form1.s[0].checked) {
+			s = escape(document.form1.s[0].value);
+		} else if (document.form1.s[1].checked) {
+			s = escape(document.form1.s[1].value);
+		}
+
+		/* 取得した値をパラメータにセット(アンパサンド'&'で連結) */
+		var pram = c + "?f=" + f + "&s=" + s;
+		/* アドレスにパラメータを付加 */
+		location.href = "./" + pram;
+		return false;
+	}
+</script>
+
+<body id="top">
+	<div id="wrapper">
+		<div id="sidebar">
+			<div id="sidebarWrap">
+				<nav id="mainnav">
+					<p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
+					<div class="panel">
+						<ul>
+							<h1>
+								<li><a href=".">TOPへ</a></li>
+							</h1>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div id="content">
+			<p id="mainImg"><img src="../static/imeges/mainImg.jpg" alt=""></p>
+
+
+			<!-- MESSAGE -->
+			<section id="sec01">
+				<div align="center">
+					<h2>授業変更情報</h2>
+					<form action="#" method="get" name="form1" onsubmit="return send();">
+						<fieldset>
+							<legend>パラメータに渡す値を入力</legend>
+							<p>
+								クラスを入力：<input type="text" name="c" value="" size="20" pattern="^[0-9A-Za-z]+$" required/>
+							</p>
+							<p>
+								<h3>※例:情報4年→J4(Jは大文字)と入力(MAJSK表記)</h3>
+							</p>
+							<p>
+								フロンティア：
+								<input type="radio" name="f" value="on">非表示
+								<input type="radio" name="f" value="off">表示
+							</p>
+							<p>
+								選択科目：
+								<input type="radio" name="s" value="on">非表示
+								<input type="radio" name="s" value="off">表示
+							</p>
+							<p>
+								<input type="submit" value="送信" />
+							</p>
+						</fieldset>
+					</form>
+				</div>
+			</section>
+			<!-- // MESSAGE -->
+			<!-- GALLERY -->
+			<section id=" sec02">
+
+			</section>
+			<!-- // GALLERY -->
+			<!-- BRAND -->
+			<section id="sec03">
+
+			</section>
+			<!-- // BRAND -->
+			<!-- PROJECT -->
+			<section id="sec04">
+
+			</section>
+			<!-- // PROJECT -->
+			<!-- COMPANY -->
+			<section id="sec05">
+
+			</section>
+			<!-- // COMPANY -->
+
+			<footer id="footer">
+				Design by <a href="http://f-tpl.com" target="_blank">http://f-tpl.com</a>
+				<!-- ←クレジット表記を外す場合はシリアルキーが必要です http://f-tpl.com/credit/ -->
+			</footer>
+
+		</div>
+	</div>
+
+</body>
+
+</html>
