@@ -26,7 +26,7 @@ def class_select(class_select):
     c = 0
     tr = 0
     after_jyugyou = []
-    for i in range(100, leng):
+    for i in range(105, leng):
         if (i + 1) != leng:
             j = i + 1
             jyugyou[j] = jyugyou[j].string
